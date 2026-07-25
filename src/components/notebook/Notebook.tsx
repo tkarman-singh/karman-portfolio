@@ -103,8 +103,8 @@ export function Notebook({
         {/* Notebook Cardboard Backing */}
         <div className="absolute inset-0 bg-[#3a2f26] rounded-b-xl rounded-t-sm shadow-inner z-0 border-x border-b border-black/40">
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cardboard.png')] opacity-60 mix-blend-multiply"></div>
-          <div className="absolute -left-1 -bottom-1 right-0 h-full bg-[#f4ebd0] -z-10 rounded-b-xl border border-black/20"></div>
-          <div className="absolute -left-2 -bottom-2 right-0 h-full bg-[#ebdcb5] -z-20 rounded-b-xl border border-black/20"></div>
+          <div className="absolute left-0 -right-1 -bottom-1 h-full bg-[#f6e3f9] -z-10 rounded-b-xl border border-black/20"></div>
+          <div className="absolute left-0 -right-2 -bottom-2 h-full bg-[#f0d5f4] -z-20 rounded-b-xl border border-black/20"></div>
         </div>
 
         {/* 3D Top Spiral Rings */}
