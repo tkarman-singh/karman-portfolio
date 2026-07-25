@@ -6,7 +6,6 @@ import { AboutPage } from "../pages/AboutPage";
 import { SkillsPage } from "../pages/SkillsPage";
 import { ExperiencePage } from "../pages/ExperiencePage";
 import { ProjectsPage } from "../pages/ProjectsPage";
-import { EducationPage } from "../pages/EducationPage";
 import { LeadershipPage } from "../pages/LeadershipPage";
 import { ContactPage } from "../pages/ContactPage";
 import { FooterPage } from "../pages/FooterPage";
@@ -17,7 +16,6 @@ const pages = [
   SkillsPage,
   ExperiencePage,
   ProjectsPage,
-  EducationPage,
   LeadershipPage,
   ContactPage,
   FooterPage,
@@ -183,7 +181,8 @@ export function Notebook({
                 <div className="absolute top-0 bottom-0 left-12 md:left-20 w-px bg-red-500/30 z-0 pointer-events-none"></div>
                 <div className="absolute top-0 bottom-0 left-[3.25rem] md:left-[5.25rem] w-px bg-red-500/30 z-0 pointer-events-none"></div>
 
-                <div className="relative w-full h-full pt-16 md:pt-20 pb-8 px-6 md:px-10 pl-16 md:pl-28 overflow-y-auto overflow-x-hidden z-10 custom-scrollbar">
+                {/* Removed overflow-y-auto to prevent inner scroll trapping which breaks continuous scrolling */}
+                <div className="relative w-full h-full pt-16 md:pt-20 pb-8 px-6 md:px-10 pl-16 md:pl-28 overflow-hidden z-10">
                   <PageComponent />
                 </div>
                 
