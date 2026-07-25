@@ -37,9 +37,7 @@ export function HeroPage() {
       {/* Absolute positioning for a taped polaroid photo or doodle */}
       <div className="absolute top-12 right-12 w-48 h-56 bg-white p-3 shadow-lg transform rotate-6 border border-gray-200 hidden md:block">
         <div className="w-full h-40 bg-gray-200 mb-2 overflow-hidden relative">
-          <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-sans text-xs">
-            [Photo placeholder]
-          </div>
+          <img src="/profile.jpg" alt="Karman Singh" className="w-full h-full object-cover" />
         </div>
         <p className="text-center text-xl font-bold">Me!</p>
         {/* Tape */}
