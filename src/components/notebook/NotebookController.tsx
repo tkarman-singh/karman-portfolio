@@ -36,6 +36,26 @@ export function NotebookController() {
       className="w-full relative bg-[#2a2a2a] bg-[url('/bg-texture-v2.jpeg')] bg-cover bg-center bg-fixed"
       style={{ height: `${totalPages * 150}vh` }}
     >
+      {/* Repeating Left Icon Border */}
+      <div 
+        className="absolute inset-y-0 left-0 md:left-2 w-10 md:w-14 z-0 opacity-90"
+        style={{ 
+          backgroundImage: "url('/ka-icon.png')", 
+          backgroundRepeat: 'repeat-y',
+          backgroundSize: '100% auto' 
+        }}
+      ></div>
+
+      {/* Repeating Right Icon Border */}
+      <div 
+        className="absolute inset-y-0 right-0 md:right-2 w-10 md:w-14 z-0 opacity-90"
+        style={{ 
+          backgroundImage: "url('/ka-icon.png')", 
+          backgroundRepeat: 'repeat-y',
+          backgroundSize: '100% auto' 
+        }}
+      ></div>
+
       {/* Subtle vignette to focus the center */}
       <div className="absolute inset-0 pointer-events-none z-0 fixed h-screen w-screen bg-[radial-gradient(circle_at_center,transparent_30%,rgba(0,0,0,0.6)_100%)]"></div>
       
