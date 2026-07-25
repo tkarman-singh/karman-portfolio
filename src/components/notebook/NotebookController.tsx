@@ -33,7 +33,7 @@ export function NotebookController() {
   return (
     <div 
       ref={containerRef}
-      className="w-full relative bg-[#2a2a2a] bg-[url('/bg-texture.jpeg')] bg-cover bg-center bg-fixed"
+      className="w-full relative bg-[#2a2a2a] bg-[url('/bg-texture-v2.jpeg')] bg-cover bg-center bg-fixed"
       style={{ height: `${totalPages * 150}vh` }}
     >
       {/* Subtle vignette to focus the center */}
