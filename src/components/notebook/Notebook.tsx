@@ -50,32 +50,38 @@ export function Notebook({
 
   const totalRings = 28;
 
-  const spiralRings = Array.from({ length: totalRings }).map((_, i) => (
-    <div 
-      key={`ring-${i}`} 
-      className="absolute -top-3 md:-top-4 z-50 flex gap-[3px] md:gap-[4px] justify-center" 
-      style={{ 
-        left: `calc(${(i * 96) / totalRings + 2}% - 10px)`,
-        width: '20px'
-      }}
-    >
-      <div className="w-[5px] md:w-[6px] h-8 md:h-[40px] rounded-full shadow-[2px_2px_3px_rgba(0,0,0,0.5)]" 
-           style={{ background: 'linear-gradient(to right, #4e2c1d 0%, #d38c5f 35%, #8c502b 65%, #2d170b 100%)' }}></div>
-      <div className="w-[5px] md:w-[6px] h-8 md:h-[40px] rounded-full shadow-[2px_2px_3px_rgba(0,0,0,0.5)]" 
-           style={{ background: 'linear-gradient(to right, #4e2c1d 0%, #d38c5f 35%, #8c502b 65%, #2d170b 100%)' }}></div>
-    </div>
-  ));
+  const spiralRings = Array.from({ length: totalRings }).map((_, i) => {
+    const leftPos = 4 + (i / (totalRings - 1)) * 92; // Distribute evenly from 4% to 96%
+    return (
+      <div 
+        key={`ring-${i}`} 
+        className="absolute -top-3 md:-top-4 z-50 flex gap-[3px] md:gap-[4px] justify-center -translate-x-1/2" 
+        style={{ 
+          left: `${leftPos}%`,
+          width: '20px'
+        }}
+      >
+        <div className="w-[5px] md:w-[6px] h-8 md:h-[40px] rounded-full shadow-[2px_2px_3px_rgba(0,0,0,0.5)]" 
+             style={{ background: 'linear-gradient(to right, #4e2c1d 0%, #d38c5f 35%, #8c502b 65%, #2d170b 100%)' }}></div>
+        <div className="w-[5px] md:w-[6px] h-8 md:h-[40px] rounded-full shadow-[2px_2px_3px_rgba(0,0,0,0.5)]" 
+             style={{ background: 'linear-gradient(to right, #4e2c1d 0%, #d38c5f 35%, #8c502b 65%, #2d170b 100%)' }}></div>
+      </div>
+    );
+  });
 
-  const holes = Array.from({ length: totalRings }).map((_, i) => (
-    <div 
-      key={`hole-${i}`} 
-      className="w-4 h-4 md:w-[20px] md:h-[20px] rounded-full absolute top-1 md:top-2 shadow-[inset_0px_4px_6px_rgba(0,0,0,0.6)] z-40 border border-black/10" 
-      style={{ 
-        left: `calc(${(i * 96) / totalRings + 2}% - 10px)`,
-        background: 'linear-gradient(to bottom, #525252 0%, #e5e5e5 100%)'
-      }}
-    ></div>
-  ));
+  const holes = Array.from({ length: totalRings }).map((_, i) => {
+    const leftPos = 4 + (i / (totalRings - 1)) * 92;
+    return (
+      <div 
+        key={`hole-${i}`} 
+        className="w-4 h-4 md:w-[20px] md:h-[20px] rounded-full absolute top-1 md:top-2 shadow-[inset_0px_-4px_6px_rgba(0,0,0,0.6)] z-40 border border-black/10 -translate-x-1/2" 
+        style={{ 
+          left: `${leftPos}%`,
+          background: 'linear-gradient(to bottom, #e5e5e5 0%, #525252 100%)'
+        }}
+      ></div>
+    );
+  });
 
   if (dimensions.width === 0) return null;
 
