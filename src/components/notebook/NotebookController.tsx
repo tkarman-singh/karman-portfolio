@@ -33,10 +33,10 @@ export function NotebookController() {
   return (
     <div 
       ref={containerRef}
-      className="w-full relative bg-[url('https://www.transparenttextures.com/patterns/wood-pattern.png')] bg-[#2c2621]"
+      className="w-full relative bg-[url('https://www.transparenttextures.com/patterns/crumpled-paper.png')] bg-[#a39171]"
       style={{ height: `${totalPages * 150}vh` }}
     >
-      <div className="absolute inset-0 bg-black/40 mix-blend-multiply pointer-events-none z-0 fixed h-screen w-screen"></div>
+      <div className="absolute inset-0 bg-black/20 mix-blend-multiply pointer-events-none z-0 fixed h-screen w-screen"></div>
       
       {/* Sticky Container for the Notebook */}
       <div className="sticky top-0 w-full h-screen flex items-center justify-center z-10 overflow-hidden">
