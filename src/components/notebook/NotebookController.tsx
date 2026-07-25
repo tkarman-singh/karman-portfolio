@@ -40,10 +40,10 @@ export function NotebookController() {
       <div className="absolute inset-y-0 left-0 md:left-2 w-10 md:w-14 z-50 flex flex-col pointer-events-none">
         {Array.from({ length: 300 }).map((_, i) => (
           <div key={`left-icon-${i}`} className="relative w-10 h-10 md:w-14 md:h-14 flex-shrink-0 group pointer-events-auto flex items-center">
-             <div className="absolute left-4 md:left-6 group-hover:left-10 md:group-hover:left-14 bg-[#bd4bd4] text-white font-black tracking-widest text-sm md:text-base h-8 md:h-10 flex items-center px-3 rounded-r-lg transition-all duration-300 ease-out shadow-lg -z-10 opacity-0 group-hover:opacity-100">
-               KARMAN
+             <div className="absolute left-4 md:left-6 group-hover:left-10 md:group-hover:left-16 text-[#bd4bd4] font-caveat text-xl md:text-2xl flex items-center transition-all duration-300 ease-out -z-10 opacity-0 group-hover:opacity-100">
+               karman
              </div>
-             <img src="/ka-icon.png" className="relative w-10 h-10 md:w-14 md:h-14 object-contain z-10 drop-shadow-md cursor-crosshair" alt="" />
+             <img src="/ka-icon.png" className="relative w-10 h-10 md:w-14 md:h-14 object-contain z-10 drop-shadow-sm" alt="" />
           </div>
         ))}
       </div>
@@ -52,10 +52,10 @@ export function NotebookController() {
       <div className="absolute inset-y-0 right-0 md:right-2 w-10 md:w-14 z-50 flex flex-col pointer-events-none">
         {Array.from({ length: 300 }).map((_, i) => (
           <div key={`right-icon-${i}`} className="relative w-10 h-10 md:w-14 md:h-14 flex-shrink-0 group pointer-events-auto flex items-center justify-end">
-             <div className="absolute right-4 md:right-6 group-hover:right-10 md:group-hover:right-14 bg-[#bd4bd4] text-white font-black tracking-widest text-sm md:text-base h-8 md:h-10 flex items-center px-3 rounded-l-lg transition-all duration-300 ease-out shadow-lg -z-10 opacity-0 group-hover:opacity-100">
-               KARMAN
+             <div className="absolute right-4 md:right-6 group-hover:right-10 md:group-hover:right-16 text-[#bd4bd4] font-caveat text-xl md:text-2xl flex items-center transition-all duration-300 ease-out -z-10 opacity-0 group-hover:opacity-100">
+               karman
              </div>
-             <img src="/ka-icon.png" className="relative w-10 h-10 md:w-14 md:h-14 object-contain z-10 drop-shadow-md cursor-crosshair" alt="" />
+             <img src="/ka-icon.png" className="relative w-10 h-10 md:w-14 md:h-14 object-contain z-10 drop-shadow-sm" alt="" />
           </div>
         ))}
       </div>
