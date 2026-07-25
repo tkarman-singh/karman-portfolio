@@ -151,7 +151,7 @@ export function Notebook({
             >
               {/* FRONT FACE */}
               <div 
-                className="absolute inset-0 bg-[#Fdfbf5] rounded-b-lg border-x border-b border-black/10 flex flex-col" 
+                className="absolute inset-0 bg-[#FBEEFF] rounded-b-lg border-x border-b border-black/10 flex flex-col" 
                 style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}
               >
                 {/* Dynamic Front Shadow */}
@@ -178,8 +178,8 @@ export function Notebook({
                   }}
                 ></div>
                 
-                <div className="absolute top-0 bottom-0 left-12 md:left-20 w-px bg-red-500/30 z-0 pointer-events-none"></div>
-                <div className="absolute top-0 bottom-0 left-[3.25rem] md:left-[5.25rem] w-px bg-red-500/30 z-0 pointer-events-none"></div>
+                <div className="absolute top-0 bottom-0 left-12 md:left-20 w-px bg-purple-500/30 z-0 pointer-events-none"></div>
+                <div className="absolute top-0 bottom-0 left-[3.25rem] md:left-[5.25rem] w-px bg-purple-500/30 z-0 pointer-events-none"></div>
 
                 {/* Removed overflow-y-auto to prevent inner scroll trapping which breaks continuous scrolling */}
                 <div className="relative w-full h-full pt-16 md:pt-20 pb-8 px-6 md:px-10 pl-16 md:pl-28 overflow-hidden z-10">
@@ -193,7 +193,7 @@ export function Notebook({
 
               {/* BACK FACE */}
               <div 
-                className="absolute inset-0 bg-[#eaddce] rounded-t-lg border-x border-t border-black/10 flex flex-col"
+                className="absolute inset-0 bg-[#f4e0f9] rounded-t-lg border-x border-t border-black/10 flex flex-col"
                 style={{ transform: "rotateX(180deg)", backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}
               >
                 {/* Dynamic Back Shadow */}
