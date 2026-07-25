@@ -108,7 +108,7 @@ export function Notebook({
         </div>
 
         {/* 3D Top Spiral Rings */}
-        <div className="absolute left-0 right-0 top-0 h-0 z-50 pointer-events-none">
+        <div className="absolute left-0 right-0 top-0 h-0 z-[200] pointer-events-none">
           {spiralRings}
         </div>
 
