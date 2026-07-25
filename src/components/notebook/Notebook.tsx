@@ -48,19 +48,30 @@ export function Notebook({
     return () => window.removeEventListener('resize', updateDimensions);
   }, []);
 
-  const spiralRings = Array.from({ length: 30 }).map((_, i) => (
+  const totalRings = 36;
+
+  const spiralRings = Array.from({ length: totalRings }).map((_, i) => (
     <div 
       key={`ring-${i}`} 
-      className="w-3 md:w-4 h-8 md:h-10 rounded-full absolute -top-4 md:-top-5 border-[3px] border-gray-400 bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600 shadow-[2px_4px_4px_rgba(0,0,0,0.5)] z-50" 
-      style={{ left: `${(i * 100) / 30 + 1.5}%` }}
-    ></div>
+      className="w-2.5 md:w-3.5 h-8 md:h-10 absolute -top-4 md:-top-5 rounded-full z-50 shadow-[2px_3px_4px_rgba(0,0,0,0.6)]" 
+      style={{ 
+        left: `calc(${(i * 96) / totalRings + 2}% - 7px)`,
+        background: 'linear-gradient(to right, #6b7280 0%, #cbd5e1 25%, #ffffff 45%, #94a3b8 75%, #374151 100%)',
+        border: '0.5px solid rgba(255,255,255,0.2)'
+      }}
+    >
+      {/* Tiny white highlight for extreme 3D effect */}
+      <div className="absolute inset-y-0 left-[25%] w-[15%] bg-white/70 blur-[0.5px] rounded-full"></div>
+    </div>
   ));
 
-  const holes = Array.from({ length: 30 }).map((_, i) => (
+  const holes = Array.from({ length: totalRings }).map((_, i) => (
     <div 
       key={`hole-${i}`} 
-      className="w-4 h-4 md:w-5 md:h-5 rounded-full absolute top-2 bg-[#1a1a1a] shadow-inner z-40 border border-black/20" 
-      style={{ left: `${(i * 100) / 30 + 1.2}%` }}
+      className="w-4 h-4 md:w-[22px] md:h-[22px] rounded-full absolute top-1.5 md:top-2 bg-[#0f0f0f] shadow-[inset_0px_3px_5px_rgba(0,0,0,1)] z-40 border border-black/30" 
+      style={{ 
+        left: `calc(${(i * 96) / totalRings + 2}% - 11px)` 
+      }}
     ></div>
   ));
 
