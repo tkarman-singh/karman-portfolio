@@ -48,29 +48,31 @@ export function Notebook({
     return () => window.removeEventListener('resize', updateDimensions);
   }, []);
 
-  const totalRings = 36;
+  const totalRings = 28;
 
   const spiralRings = Array.from({ length: totalRings }).map((_, i) => (
     <div 
       key={`ring-${i}`} 
-      className="w-2.5 md:w-3.5 h-8 md:h-10 absolute -top-4 md:-top-5 rounded-full z-50 shadow-[2px_3px_4px_rgba(0,0,0,0.6)]" 
+      className="absolute -top-3 md:-top-4 z-50 flex gap-[3px] md:gap-[4px] justify-center" 
       style={{ 
-        left: `calc(${(i * 96) / totalRings + 2}% - 7px)`,
-        background: 'linear-gradient(to right, #6b7280 0%, #cbd5e1 25%, #ffffff 45%, #94a3b8 75%, #374151 100%)',
-        border: '0.5px solid rgba(255,255,255,0.2)'
+        left: `calc(${(i * 96) / totalRings + 2}% - 10px)`,
+        width: '20px'
       }}
     >
-      {/* Tiny white highlight for extreme 3D effect */}
-      <div className="absolute inset-y-0 left-[25%] w-[15%] bg-white/70 blur-[0.5px] rounded-full"></div>
+      <div className="w-[5px] md:w-[6px] h-8 md:h-[40px] rounded-full shadow-[2px_2px_3px_rgba(0,0,0,0.5)]" 
+           style={{ background: 'linear-gradient(to right, #4e2c1d 0%, #d38c5f 35%, #8c502b 65%, #2d170b 100%)' }}></div>
+      <div className="w-[5px] md:w-[6px] h-8 md:h-[40px] rounded-full shadow-[2px_2px_3px_rgba(0,0,0,0.5)]" 
+           style={{ background: 'linear-gradient(to right, #4e2c1d 0%, #d38c5f 35%, #8c502b 65%, #2d170b 100%)' }}></div>
     </div>
   ));
 
   const holes = Array.from({ length: totalRings }).map((_, i) => (
     <div 
       key={`hole-${i}`} 
-      className="w-4 h-4 md:w-[22px] md:h-[22px] rounded-full absolute top-1.5 md:top-2 bg-[#0f0f0f] shadow-[inset_0px_3px_5px_rgba(0,0,0,1)] z-40 border border-black/30" 
+      className="w-4 h-4 md:w-[20px] md:h-[20px] rounded-full absolute top-1 md:top-2 shadow-[inset_0px_4px_6px_rgba(0,0,0,0.6)] z-40 border border-black/10" 
       style={{ 
-        left: `calc(${(i * 96) / totalRings + 2}% - 11px)` 
+        left: `calc(${(i * 96) / totalRings + 2}% - 10px)`,
+        background: 'linear-gradient(to bottom, #525252 0%, #e5e5e5 100%)'
       }}
     ></div>
   ));
