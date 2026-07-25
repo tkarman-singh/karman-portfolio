@@ -33,7 +33,7 @@ export function NotebookController() {
   return (
     <div 
       ref={containerRef}
-      className="w-full relative bg-[#2a2a2a]"
+      className="w-full relative bg-[#2a2a2c]"
       style={{ height: `${totalPages * 150}vh` }}
     >
       {/* Inverted Crumpled Texture for white creases on black paper */}
