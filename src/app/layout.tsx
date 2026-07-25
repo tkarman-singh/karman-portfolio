@@ -9,6 +9,9 @@ const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfa
 export const metadata: Metadata = {
   title: "Karman Singh | Notebook",
   description: "Interactive portfolio of Karman Singh.",
+  icons: {
+    icon: "/ka-icon.png",
+  },
 };
 
 import { ErrorOverlay } from "@/components/ErrorOverlay";
