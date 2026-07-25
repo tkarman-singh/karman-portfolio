@@ -37,24 +37,28 @@ export function NotebookController() {
       style={{ height: `${totalPages * 150}vh` }}
     >
       {/* Repeating Left Icon Border */}
-      <div 
-        className="absolute inset-y-0 left-0 md:left-2 w-10 md:w-14 z-0 opacity-90"
-        style={{ 
-          backgroundImage: "url('/ka-icon.png')", 
-          backgroundRepeat: 'repeat-y',
-          backgroundSize: '100% auto' 
-        }}
-      ></div>
+      <div className="absolute inset-y-0 left-0 md:left-2 w-10 md:w-14 z-50 flex flex-col pointer-events-none">
+        {Array.from({ length: 300 }).map((_, i) => (
+          <div key={`left-icon-${i}`} className="relative w-10 h-10 md:w-14 md:h-14 flex-shrink-0 group pointer-events-auto flex items-center">
+             <div className="absolute left-4 md:left-6 group-hover:left-10 md:group-hover:left-14 bg-[#bd4bd4] text-white font-black tracking-widest text-sm md:text-base h-8 md:h-10 flex items-center px-3 rounded-r-lg transition-all duration-300 ease-out shadow-lg -z-10 opacity-0 group-hover:opacity-100">
+               KARMAN
+             </div>
+             <img src="/ka-icon.png" className="relative w-10 h-10 md:w-14 md:h-14 object-contain z-10 drop-shadow-md cursor-crosshair" alt="" />
+          </div>
+        ))}
+      </div>
 
       {/* Repeating Right Icon Border */}
-      <div 
-        className="absolute inset-y-0 right-0 md:right-2 w-10 md:w-14 z-0 opacity-90"
-        style={{ 
-          backgroundImage: "url('/ka-icon.png')", 
-          backgroundRepeat: 'repeat-y',
-          backgroundSize: '100% auto' 
-        }}
-      ></div>
+      <div className="absolute inset-y-0 right-0 md:right-2 w-10 md:w-14 z-50 flex flex-col pointer-events-none">
+        {Array.from({ length: 300 }).map((_, i) => (
+          <div key={`right-icon-${i}`} className="relative w-10 h-10 md:w-14 md:h-14 flex-shrink-0 group pointer-events-auto flex items-center justify-end">
+             <div className="absolute right-4 md:right-6 group-hover:right-10 md:group-hover:right-14 bg-[#bd4bd4] text-white font-black tracking-widest text-sm md:text-base h-8 md:h-10 flex items-center px-3 rounded-l-lg transition-all duration-300 ease-out shadow-lg -z-10 opacity-0 group-hover:opacity-100">
+               KARMAN
+             </div>
+             <img src="/ka-icon.png" className="relative w-10 h-10 md:w-14 md:h-14 object-contain z-10 drop-shadow-md cursor-crosshair" alt="" />
+          </div>
+        ))}
+      </div>
 
       {/* Subtle vignette to focus the center */}
       <div className="absolute inset-0 pointer-events-none z-0 fixed h-screen w-screen bg-[radial-gradient(circle_at_center,transparent_30%,rgba(0,0,0,0.6)_100%)]"></div>
