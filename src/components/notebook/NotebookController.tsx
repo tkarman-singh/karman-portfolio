@@ -36,28 +36,31 @@ export function NotebookController() {
       className="w-full relative bg-[#2a2a2a] bg-[url('/bg-texture-v2.jpeg')] bg-cover bg-center bg-fixed"
       style={{ height: `${totalPages * 150}vh` }}
     >
-      {/* Repeating Left Icon Border */}
-      <div className="absolute inset-y-0 left-0 md:left-2 w-10 md:w-14 z-50 flex flex-col pointer-events-none">
-        {Array.from({ length: 300 }).map((_, i) => (
-          <div key={`left-icon-${i}`} className="relative w-10 h-10 md:w-14 md:h-14 flex-shrink-0 group pointer-events-auto flex items-center">
-             <div className="absolute left-4 md:left-6 group-hover:left-10 md:group-hover:left-16 text-[#bd4bd4] font-caveat text-xl md:text-2xl flex items-center transition-all duration-300 ease-out -z-10 opacity-0 group-hover:opacity-100">
-               karman
-             </div>
-             <img src="/ka-icon.png" className="relative w-10 h-10 md:w-14 md:h-14 object-contain z-10 drop-shadow-sm" alt="" />
-          </div>
-        ))}
-      </div>
+      {/* Wrapper to clip extra icons vertically without clipping horizontal hover effects */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-50">
+        {/* Repeating Left Icon Border */}
+        <div className="absolute inset-y-0 left-0 md:left-2 w-10 md:w-14 flex flex-col pointer-events-none">
+          {Array.from({ length: 300 }).map((_, i) => (
+            <div key={`left-icon-${i}`} className="relative w-10 h-10 md:w-14 md:h-14 flex-shrink-0 group pointer-events-auto flex items-center">
+               <div className="absolute left-4 md:left-6 group-hover:left-10 md:group-hover:left-16 text-[#bd4bd4] font-caveat text-xl md:text-2xl flex items-center transition-all duration-300 ease-out -z-10 opacity-0 group-hover:opacity-100">
+                 karman
+               </div>
+               <img src="/ka-icon.png" className="relative w-10 h-10 md:w-14 md:h-14 object-contain z-10 drop-shadow-sm" alt="" />
+            </div>
+          ))}
+        </div>
 
-      {/* Repeating Right Icon Border */}
-      <div className="absolute inset-y-0 right-0 md:right-2 w-10 md:w-14 z-50 flex flex-col pointer-events-none">
-        {Array.from({ length: 300 }).map((_, i) => (
-          <div key={`right-icon-${i}`} className="relative w-10 h-10 md:w-14 md:h-14 flex-shrink-0 group pointer-events-auto flex items-center justify-end">
-             <div className="absolute right-4 md:right-6 group-hover:right-10 md:group-hover:right-16 text-[#bd4bd4] font-caveat text-xl md:text-2xl flex items-center transition-all duration-300 ease-out -z-10 opacity-0 group-hover:opacity-100">
-               karman
-             </div>
-             <img src="/ka-icon.png" className="relative w-10 h-10 md:w-14 md:h-14 object-contain z-10 drop-shadow-sm" alt="" />
-          </div>
-        ))}
+        {/* Repeating Right Icon Border */}
+        <div className="absolute inset-y-0 right-0 md:right-2 w-10 md:w-14 flex flex-col pointer-events-none">
+          {Array.from({ length: 300 }).map((_, i) => (
+            <div key={`right-icon-${i}`} className="relative w-10 h-10 md:w-14 md:h-14 flex-shrink-0 group pointer-events-auto flex items-center justify-end">
+               <div className="absolute right-4 md:right-6 group-hover:right-10 md:group-hover:right-16 text-[#bd4bd4] font-caveat text-xl md:text-2xl flex items-center transition-all duration-300 ease-out -z-10 opacity-0 group-hover:opacity-100">
+                 karman
+               </div>
+               <img src="/ka-icon.png" className="relative w-10 h-10 md:w-14 md:h-14 object-contain z-10 drop-shadow-sm" alt="" />
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Subtle vignette to focus the center */}
