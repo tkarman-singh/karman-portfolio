@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Inter, Caveat, Playfair_Display } from "next/font/google";
+import { Space_Mono, Fraunces, Great_Vibes } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat" });
-const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
+const spaceMono = Space_Mono({ weight: ["400", "700"], subsets: ["latin"], variable: "--font-space-mono" });
+const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces" });
+const greatVibes = Great_Vibes({ weight: "400", subsets: ["latin"], variable: "--font-great-vibes" });
 
 export const metadata: Metadata = {
-  title: "Karman Singh | Notebook",
+  title: "Karman Singh | Portfolio",
   description: "Interactive portfolio of Karman Singh.",
   icons: {
     icon: "/ka-icon.png",
@@ -22,8 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${caveat.variable} ${playfair.variable}`}>
-      <body className="antialiased bg-[#2c2621] selection:bg-yellow-200/50 selection:text-black min-h-screen">
+    <html lang="en" className={`${spaceMono.variable} ${fraunces.variable} ${greatVibes.variable}`}>
+      <body className="antialiased min-h-screen">
         <ErrorOverlay />
         {children}
       </body>

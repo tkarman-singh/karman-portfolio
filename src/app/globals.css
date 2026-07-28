@@ -1,17 +1,31 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #2c2621;
-  --color-foreground: #2C2C2C;
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-caveat: var(--font-caveat), cursive;
-  --font-playfair: var(--font-playfair), serif;
+  --color-cream: #f1ecd9;
+  --color-cream-2: #eae3cb;
+  --color-grid-line: rgba(107, 110, 69, 0.16);
+  --color-olive: #6b6e45;
+  --color-olive-dark: #585a38;
+  --color-olive-darker: #4a4c30;
+  --color-ink: #3f3f2e;
+  --color-ink-soft: #6b6a56;
+  --color-accent: #df7a3e;
+  --color-maroon: #7c1f2b;
+  --color-folder: #f3c53d;
+  --color-folder-tab: #3f5c93;
+  --color-close: #e0594b;
+  --color-paper: #f6f1e4;
+  --color-line: #c9c2a3;
+
+  --font-mono: var(--font-space-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-fraunces: var(--font-fraunces), serif;
+  --font-vibes: var(--font-great-vibes), cursive;
 }
 
 @layer base {
   :root {
-    --background: #2c2621;
-    --foreground: #2C2C2C;
+    --background: #f1ecd9;
+    --foreground: #3f3f2e;
   }
 
   html, body {
@@ -19,20 +33,15 @@
     padding: 0;
     width: 100%;
     min-height: 100%;
-    background-color: var(--background);
-    color: var(--foreground);
-  }
-
-  /* Custom scrollbar for inside the notebook pages */
-  .notebook-scroll::-webkit-scrollbar {
-    width: 6px;
-  }
-  .notebook-scroll::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  .notebook-scroll::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    background: 
+      linear-gradient(var(--color-grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-grid-line) 1px, transparent 1px),
+      var(--color-cream);
+    background-size: 28px 28px, 28px 28px, 100% 100%;
+    color: var(--color-ink);
+    font-family: var(--font-mono);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
   }
 }
 
