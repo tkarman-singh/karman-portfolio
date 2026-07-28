@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Karman Singh — Portfolio</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Great+Vibes&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- LEFT DOCK -->
+  <div class="dock left">
+    <button class="dock-item" onclick="document.getElementById('profile-section').scrollIntoView()">
+      <div class="dock-icon profile-ico">
+        <svg fill="none" height="24" stroke="#f4efdd" stroke-width="2" viewBox="0 0 24 24" width="24"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path></svg>
+      </div>
+      <span class="dock-label">profile</span>
+    </button>
+    <button class="dock-item" onclick="document.getElementById('works-section').scrollIntoView()">
+      <div class="dock-icon folder-ico"></div>
+      <span class="dock-label">works</span>
+    </button>
+  </div>
+  
+  <!-- RIGHT DOCK -->
+  <div class="dock right">
+    <button class="dock-item" onclick="document.getElementById('achieve-modal').classList.add('active')">
+      <div class="dock-icon folder-ico"></div>
+      <span class="dock-label">achievements</span>
+    </button>
+    <button class="dock-item" onclick="window.open('#','_blank')">
+      <div class="dock-icon folder-ico"></div>
+      <span class="dock-label">certs</span>
+    </button>
+    <button class="dock-item" onclick="document.getElementById('contact-section').scrollIntoView()">
+      <div class="dock-icon folder-ico"></div>
+      <span class="dock-label">contact</span>
+    </button>
+    <button class="dock-item" onclick="document.getElementById('resume-section').scrollIntoView()">
+      <div class="dock-icon folder-ico"></div>
+      <span class="dock-label">resume</span>
+    </button>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1 class="wordmark display">PORTFOLIO</h1>
+    <p class="of-line">of</p>
+    <p class="name-line"><span class="cursive-word">Karman</span> <span class="cursive-word">Singh</span></p>
+    <div class="hero-sub"><span class="arrow">↓</span> scroll to explore <span class="arrow">↓</span></div>
+  </section>
+  
+  <div class="stripe" id="social-1">
+    <a aria-label="LinkedIn" class="social-btn linkedin" href="#" rel="noopener" target="_blank">
+      <svg fill="#fff" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7.5 0h3.83v2.05h.05c.53-1 1.84-2.05 3.79-2.05 4.05 0 4.8 2.67 4.8 6.14V23h-4v-6.87c0-1.64-.03-3.75-2.28-3.75-2.29 0-2.64 1.79-2.64 3.63V23h-4V8z"></path></svg>
+    </a>
+    <a aria-label="GitHub" class="social-btn github" href="#" rel="noopener" target="_blank">
+      <svg fill="#fff" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.1c-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.77.11 3.06.74.8 1.19 1.83 1.19 3.09 0 4.43-2.7 5.4-5.27 5.69.42.36.78 1.08.78 2.18v3.23c0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"></path></svg>
+    </a>
+    <a aria-label="LeetCode" class="social-btn leetcode" href="#" rel="noopener" target="_blank">
+      <svg fill="none" viewBox="0 0 24 24"><path d="M13.5 2.5l-7 7.3a2 2 0 0 0 0 2.8l5.4 5.6a2 2 0 0 0 2.9 0l1.6-1.6a1.2 1.2 0 0 0-1.7-1.7l-1.4 1.4-4.6-4.8 6-6.3a1.2 1.2 0 1 0-1.7-1.7z" fill="#ffa116"></path><path d="M9.5 14.2h8a1.2 1.2 0 1 1 0 2.4h-8a1.2 1.2 0 1 1 0-2.4z" fill="#fff"></path><path d="M10.8 9.4h6.7a1.2 1.2 0 1 1 0 2.4h-6.7a1.2 1.2 0 1 1 0-2.4z" fill="#b3b3b3"></path></svg>
+    </a>
+    <a aria-label="X" class="social-btn x" href="#" rel="noopener" target="_blank">
+      <svg fill="#fff" viewBox="0 0 24 24"><path d="M13.9 10.4L21 2h-2.2l-6.1 7.3L7.8 2H2l7.4 10.8L2 22h2.2l6.5-7.7L16.2 22H22l-8.1-11.6zm-2.3 2.7l-.8-1.1L5 3.7h2.5l4.8 6.9.8 1.1 6.3 9h-2.5l-5.3-7.6z"></path></svg>
+    </a>
+    <a aria-label="Instagram" class="social-btn instagram" href="#" rel="noopener" target="_blank">
+      <svg fill="none" stroke="#fff" stroke-width="1.8" viewBox="0 0 24 24"><rect height="18" rx="5" width="18" x="3" y="3"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" fill="#fff" r="1" stroke="none"></circle></svg>
+    </a>
+  </div>
+
+  <!-- PROFILE SECTION -->
+  <section class="section" id="profile-section">
+    <span class="section-label">01 · about</span>
+    <div class="window" data-drag="">
+      <div class="window-bar" data-handle="">
+        <span>C:\KARMAN\profile</span>
+        <button class="window-close" data-close="">×</button>
+      </div>
+      <div class="window-body">
+        <div class="profile-row">
+          <div class="avatar-placeholder"></div>
+          <div>
+            <p class="hi">hi, I'm</p>
+            <h2 class="name">Karman Singh</h2>
+            <p class="role">SOFTWARE ENGINEER / DEVELOPER</p>
+            <p class="quote">"Building awesome web apps and experimenting with AI."</p>
+          </div>
+        </div>
+        <div class="edu-row">
+          <p class="edu-text"><strong>Education:</strong> Your University Name<br>Degree Name, Class of 202X</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKS SECTION -->
+  <section class="section" id="works-section">
+    <span class="section-label">02 · works</span>
+    <div class="window window-wide" data-drag="">
+      <div class="window-bar" data-handle="">
+        <span>C:\KARMAN\works</span>
+        <button class="window-close" data-close="">×</button>
+      </div>
+      <div class="window-body">
+        <div class="works-flag"></div>
+        <h3 class="works-title display">My Projects</h3>
+        
+        <div class="skill-category">
+          <h4 class="skill-cat-title">Frontend</h4>
+          <div class="tools-grid">
+            <div class="tool"><div class="tool-icon">⚛️</div><span class="tool-name">React</span></div>
+            <div class="tool"><div class="tool-icon">⚡</div><span class="tool-name">Vite</span></div>
+            <div class="tool"><div class="tool-icon">💅</div><span class="tool-name">Tailwind</span></div>
+            <div class="tool"><div class="tool-icon">🎨</div><span class="tool-name">CSS3</span></div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h4 class="skill-cat-title">Backend</h4>
+          <div class="tools-grid">
+            <div class="tool"><div class="tool-icon">🟢</div><span class="tool-name">Node.js</span></div>
+            <div class="tool"><div class="tool-icon">🗄️</div><span class="tool-name">MongoDB</span></div>
+            <div class="tool"><div class="tool-icon">🐘</div><span class="tool-name">Postgres</span></div>
+            <div class="tool"><div class="tool-icon">🐍</div><span class="tool-name">Python</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TERMINAL SECTION (Fun zone) -->
+  <section class="section">
+    <span class="section-label">03 · fun</span>
+    <div class="window" data-drag="">
+      <div class="window-bar" data-handle="">
+        <span>C:\KARMAN\fun_zone.exe</span>
+        <button class="window-close" data-close="">×</button>
+      </div>
+      <div class="window-body">
+        <div class="now-playing">
+          <div class="now-dot"></div>
+          <span>Currently hacking on AI Projects</span>
+        </div>
+        
+        <div class="terminal-box" id="terminal">
+          <div class="terminal-log">Welcome to KarmanOS v1.0.0
+Type 'help' for a list of commands.</div>
+          <div class="terminal-input-row">
+            <span class="terminal-prompt">&gt;</span>
+            <input type="text" class="terminal-input" id="term-input" autocomplete="off" spellcheck="false">
+          </div>
+        </div>
+
+        <div class="funzone-flex">
+          <div class="hit-counter">
+            <span class="label">VISITS:</span>
+            <span class="digits">001337</span>
+          </div>
+        </div>
+        <p class="konami-hint">(psst... try typing 'konami' in the terminal)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="section" id="contact-section">
+    <span class="section-label">04 · contact</span>
+    <div class="window" data-drag="">
+      <div class="window-bar" data-handle="">
+        <span>C:\KARMAN\contact</span>
+        <button class="window-close" data-close="">×</button>
+      </div>
+      <div class="window-body">
+        <div class="contact-list">
+          <div class="contact-row">
+            <span class="tag">EMAIL</span>
+            <a href="mailto:your.email@example.com">your.email@example.com</a>
+          </div>
+          <div class="contact-row">
+            <span class="tag">LOCATION</span>
+            <span>Your City, Country</span>
+          </div>
+          <div class="contact-row">
+            <span class="tag">DISCORD</span>
+            <span>yourdiscordtag</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME SECTION -->
+  <section class="section" id="resume-section">
+    <span class="section-label">05 · resume</span>
+    <div class="window" data-drag="">
+      <div class="window-bar" data-handle="">
+        <span>C:\KARMAN\resume.pdf</span>
+        <button class="window-close" data-close="">×</button>
+      </div>
+      <div class="window-body resume-body">
+        <p class="resume-line">Want a formal list of what I've done?</p>
+        <a href="#" class="download-btn">DOWNLOAD RESUME ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Karman Singh. Built with Vanilla Web Tech.</p>
+  </footer>
+
+  <!-- ACHIEVEMENTS MODAL -->
+  <div class="modal-overlay" id="achieve-modal">
+    <div class="window modal-window" data-drag="">
+      <div class="window-bar" data-handle="">
+        <span>C:\KARMAN\achievements</span>
+        <button class="window-close" onclick="document.getElementById('achieve-modal').classList.remove('active')">×</button>
+      </div>
+      <div class="window-body">
+        <div class="achieve-list">
+          <div class="achieve-row">
+            <div class="achieve-icon">🏆</div>
+            <span class="achieve-text">Won 1st place in Local Hackathon 2025</span>
+          </div>
+          <div class="achieve-row">
+            <div class="achieve-icon">🌟</div>
+            <span class="achieve-text">Open Source Contributor for Project X</span>
+          </div>
+          <div class="achieve-row">
+            <div class="achieve-icon">🎓</div>
+            <span class="achieve-text">Graduated with Honors</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
